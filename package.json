@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start",
+    "start": "git submodule init && git submodule update --remote && node setup.js && docusaurus start",
     "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
@@ -19,7 +19,9 @@
     "@docusaurus/core": "^2.0.0-beta.14",
     "@docusaurus/preset-classic": "^2.0.0-beta.14",
     "@mdx-js/react": "^1.6.21",
+    "@octokit/core": "^3.5.1",
     "clsx": "^1.1.1",
+    "fs-extra": "^10.0.0",
     "prism-react-renderer": "^1.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
